@@ -20,6 +20,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+require('dotenv').config();
+
 // Contact form handler
 app.post('/contact', async (req, res) => {
   const { name, email, subject, message } = req.body;
