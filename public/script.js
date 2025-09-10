@@ -5,7 +5,7 @@ const typed = new Typed('#typed', {
   typeSpeed: 50,
   backSpeed: 30,
   backDelay: 1500,
-  loop: true,
+  loop: true
 });
 
 document.getElementById('contact-form').addEventListener('submit', async (e) => {
@@ -19,7 +19,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
   };
 
   try {
-    const response = await fetch('http://localhost:3000/contact', {
+    const response = await fetch('/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
